@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Landing from "./pages/Landing.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Services from "./pages/Services.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "/", Component: Landing },
       { path: "/login", Component: Login },
       { path: "/register", Component: Register },
+      { path: "/services", Component: Services },
     ],
   },
 ]);

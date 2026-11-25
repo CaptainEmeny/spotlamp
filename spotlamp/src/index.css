@@ -54,7 +54,7 @@ header {
 
 a {
     text-decoration: none;
-    color: var(--white)
+    color: var(--white);
 }
 
 .navbar {
@@ -197,10 +197,19 @@ footer {
     color: var(--black);
 }
 
+.text-white {
+    color: var(--white);
+}
+
+
 .img-responsive {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.img-responsive.med {
+    max-width: 50%;
 }
 
 .mx-auto {
@@ -281,11 +290,23 @@ section {
     gap: 4rem;
 }
 
+.grid-2 {
+
+    width: 70%;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+    justify-items: center;
+    justify-self: center;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
+
 
 .hero-row {
   max-width: 1200px;
@@ -305,7 +326,15 @@ section {
     .flex-row {
         flex-direction: column;
     }
+
 }
+
+@media (max-width: 1024px) {
+    .grid-2 {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
 
 .justify-center {
     height: auto;
