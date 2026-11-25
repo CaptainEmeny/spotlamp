@@ -24,46 +24,38 @@ For Milestone 2, the original interface is being rebuilt with React and connecte
 
 ```text
 spotlight/
-├── API_CONTRACT.md
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── hero.png
-│   │   └── react.svg
-│   │   └── vite.svg
-│   ├── components/
-│   │   └── Card.jsx
-│   │   └── Footer.jsx
-│   │   └── Navbar.jsx
-│   ├── pages/
-│   │   └── Landing.jsx
-│   │   └── Login.jsx
-│   │   └── Landing.jsx
-│   ├── controllers/
-│   │   └── stylistController.jsx
-│   ├── routes/
-│   │   └── stylistRoutes.jsx
-│   ├── data/
-│   │   └── stylists.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   ├── main.jsx
-├── package.json
-├── package-lock.json
-├── eslint.config.js
-├── index.html
-├── server.js
-├── package.json
-└── vite.config.js
+├── project-info/
+├── server/
+│   ├── src/
+│   │   ├── controllers/stylistController.js
+│   │   ├── data/stylists.js
+│   │   └── routes/stylistRoutes.js
+│   ├── package.json
+│   ├── server.js
+│   └── controller.test.js
+└── spotlamp/
+    ├── public/
+    ├── src/
+    │   ├── assets/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── index.css
+    │   ├── App.jsx
+    │   └── main.jsx
+    ├── package.json
+    ├── index.html
+    ├── eslint.config.js
+    └── vite.config.js
 ```
 
 ## Frontend
 
-The frontend is built with React and Vite.
+The frontend is built with React and Vite. Its dependencies are isolated in `spotlamp`.
 
 To install the frontend dependencies, run:
 
 ```bash
+cd spotlamp
 npm install
 ```
 
@@ -77,16 +69,16 @@ Vite will display the local address for the frontend in the terminal.
 
 ## Spotlight API
 
-The backend is built with Express and is located inside the `server.js` file.
+The backend is built with Express and is located in `server`.
 
 For Milestone 2, stylist data is stored in memory instead of using a database. Database persistence and authentication can be added in a later milestone.
 
 ### Run the Backend
 
-Move into the spotlight folder:
+Move into the server folder:
 
 ```bash
-cd spotlight
+cd server
 ```
 
 Install the backend dependencies:
@@ -218,22 +210,16 @@ Example:
 
 ## Backend Tests
 
-The backend uses Vitest and Supertest for route testing.
+The backend uses Vitest for controller testing.
 
 To run the tests:
 
 ```bash
-cd spotlight
+cd server
 npm test
 ```
 
-The current route test checks that:
-
-```text
-GET /api/stylists
-```
-
-returns a successful `200` response and returns stylist data as an array.
+The current test checks that the controller returns all stylist data with a `200` response.
 
 ## Current Backend Features
 

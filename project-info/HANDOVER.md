@@ -4,7 +4,7 @@
 This app is a social media website for hairstylist and barbers to get a broader outreach and also helping grow their business.
 
 ## 2. How to run it
-The node version is 24.18.0, floders that need npm install is just the spotlight folder itself, and the environment variables should be placed in .env 
+Use Node.js 24 or newer. Install dependencies separately with `npm install` in both `spotlamp` (frontend) and `server` (backend). Environment variables should be placed in `.env`.
 Last tested from a fresh clone on Novmember 12, 2026, by Derrich Tawiah.
 
 ## 3. Current state
@@ -24,7 +24,7 @@ The four checks: did each pass as received? After the handoff fixes?
 
 ## 7. Where things live
 
-The data is being kept in memory in the data folder, front-end components are being kept in components folder, and routes are being kept in the routes folder they are all located in the src folder.
+Stylist data, controllers, and API routes are in `server/src`. Front-end components and pages are in `spotlamp/src`.
 
 ## 8. Suggested first steps for Milestone 3 (authors)
 I think you guys should finish the login/register function, profiles, and booking, and from their just let you imagination run wild, you can do anything with this really.

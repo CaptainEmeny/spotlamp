@@ -40,7 +40,7 @@ const stylists = [
     },
 
 ]
-export default function navbar() {
+export default function Navbar() {
 
   const [query, setQuery] = useState("");
 
